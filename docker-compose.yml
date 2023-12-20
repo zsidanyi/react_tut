@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  client:
+    image: client-dev-i
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        - EXCERCISE=03-pizza-menu
+    container_name: client-dev-c
+    volumes:
+      - .\03-pizza-menu:/client
+      - node_modules:/client/node_modules/
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+  react_devenv:
+    image: zsdev:latest
+    container_name: react_devenv
+    tty: true
+    stdin_open: true
+    volumes:
+    - ~/.ssh:/root/.ssh
+    - ./:/workspace
+volumes:
+    node_modules:

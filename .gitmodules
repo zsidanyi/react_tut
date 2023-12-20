@@ -1,0 +1,4 @@
+[submodule "downloads/ultimate-react-course"]
+	path = downloads/ultimate-react-course
+	url = git@github.com:jonasschmedtmann/ultimate-react-course.git
+	shallow = true

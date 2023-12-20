@@ -20,6 +20,7 @@ services:
     container_name: react_devenv
     tty: true
     stdin_open: true
+    attach: false
     volumes:
     - ~/.ssh:/root/.ssh
     - ./:/workspace

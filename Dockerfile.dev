@@ -4,6 +4,5 @@ WORKDIR /client
 ARG EXCERCISE
 
 COPY $EXCERCISE/package.json .
-RUN npm i
-COPY $EXCERCISE .
+RUN npm install
 CMD ["npm", "start"]

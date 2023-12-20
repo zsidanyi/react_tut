@@ -9,14 +9,14 @@ services:
         - EXCERCISE=03-pizza-menu
     container_name: client-dev-c
     volumes:
-      - .\03-pizza-menu:/client
+      - ./03-pizza-menu:/client
       - node_modules:/client/node_modules/
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=development
   react_devenv:
-    image: zsdev:latest
+    image: zsdev-i:latest
     container_name: react_devenv
     tty: true
     stdin_open: true
